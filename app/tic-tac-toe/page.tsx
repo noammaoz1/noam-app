@@ -1,12 +1,15 @@
 "use client";
 import { useState } from "react";
+import Confetti from "react-confetti-boom";
 import styles from "./page.module.css";
 
 // The Square component represents a single square on the board.
 // It receives its current value ('X', 'O', or null) and a click handler from the parent Board component.
 function Square({ value, onSquareClick }: { value: string | null, onSquareClick: () => void }) {
+  // Determine the class name based on the square's value (X, O, or empty)
+  const squareClass = value === 'X' ? styles['square-x'] : value === 'O' ? styles['square-o'] : '';
   return (
-    <button className={styles.square} onClick={onSquareClick}>
+    <button className={`${styles.square} ${squareClass}`} onClick={onSquareClick}>
       {value}
     </button>
   );
@@ -58,23 +61,26 @@ export default function Board() {
   return (
     // The main game container, centered using CSS.
     <div className={styles.game} >
+      {winner && <Confetti mode="boom" particleCount={50} />}
       <div className={styles.status} >{status}</div>
-      <div>
-        {/* Each div with "board-row" class represents a row of squares. */}
-        <div className={styles["board-row"]}>
-          <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-          <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-          <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-        </div>
-        <div className={styles["board-row"]}>
-          <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-          <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-          <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-        </div>
-        <div className={styles["board-row"]}>
-          <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-          <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-          <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+      <div className={styles.boardContainer}>
+        <div>
+          {/* Each div with "board-row" class represents a row of squares. */}
+          <div className={styles["board-row"]}>
+            <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
+            <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
+            <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+          </div>
+          <div className={styles["board-row"]}>
+            <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
+            <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
+            <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+          </div>
+          <div className={styles["board-row"]}>
+            <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
+            <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
+            <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+          </div>
         </div>
       </div>
       <button className={styles.playAgainButton} onClick={handlePlayAgain}>

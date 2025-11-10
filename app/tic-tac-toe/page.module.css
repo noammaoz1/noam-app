@@ -1,42 +1,80 @@
-.square {
-  background: var(--tic-tac-toe-background);
-  border: 1px solid var(--tic-tac-toe-border);
-  border-radius: 0%;
-  float: left;
-  font-size: 64px;
-  font-weight: bold;
-  line-height: 100px;
-  height: 100px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 100px;
-}
-
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-}
-
 .game {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background-color: var(--tic-tac-toe-bg);
+  color: var(--tic-tac-toe-text-color); 
+}
+
+.boardContainer {
+  background-color: var(--tic-tac-toe-bg);
+  padding: 1.25rem; 
+  border-radius: 0.9375rem; 
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.square {
+  background: var(--tic-tac-toe-bg); 
+  border: 0.0625rem solid var(--tic-tac-toe-border); 
+  border-radius: 0.625rem; 
+  float: left;
+  font-size: 4rem; 
+  font-weight: bold;
+  line-height: 6.25rem; 
+  height: 6.25rem; 
+  margin: 0.3125rem; 
+  padding: 0;
+  text-align: center;
+  width: 6.25rem; 
+  cursor: pointer;
+  /* Click animation */
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out; 
+}
+
+.square:hover {
+  background-color: var(--tic-tac-toe-border); /* Hover color */
+  transform: scale(1.03); /* Slight zoom effect */
+}
+
+/* Specific styles for X and O */
+.square-x {
+  color: var(--tic-tac-toe-player-x-color);
+}
+
+.square-o {
+  color: var(--tic-tac-toe-player-o-color);
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.status {
+  margin-top: 1.25rem; 
+  margin-bottom: 1.25rem; 
+  font-size: 1.5rem; 
+  font-weight: bold;
+  color: var(--tic-tac-toe-text-color);
 }
 
 .playAgainButton {
-  margin: 15px 0;
-  padding: 8px 16px;
-  font-size: 18px;
+  margin: 1.5625rem 0;
+  padding: 0.75rem 1.5rem; 
+  font-size: 1.25rem; 
   cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid var(--tic-tac-toe-border);
+  border-radius: 0.625rem; 
+  border: 0.125rem solid var(--tic-tac-toe-border); 
+  background-color: var(--tic-tac-toe-bg);
+  color: var(--tic-tac-toe-text-color);
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.playAgainButton:hover {
+  background-color: var(--tic-tac-toe-border);
+  color: var(--tic-tac-toe-bg);
+  transform: translateY(-0.125rem);
 }
