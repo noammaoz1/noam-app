@@ -4,15 +4,15 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color: var(--tic-tac-toe-bg);
+  background-color: var(--tic-tac-toe-game-bg);
   color: var(--tic-tac-toe-text-color); 
 }
 
 .boardContainer {
   background-color: var(--tic-tac-toe-bg);
   padding: 1.25rem; 
-  border-radius: 0.9375rem; 
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  border-radius: 0.9375rem;
+  box-shadow: 0 0.125rem 0.25rem var(--color-shadow);
 }
 
 .square {
@@ -67,7 +67,7 @@
   cursor: pointer;
   border-radius: 0.625rem; 
   border: 0.125rem solid var(--tic-tac-toe-border); 
-  background-color: var(--tic-tac-toe-bg);
+  background-color: var(--tic-tac-toe-game-bg);
   color: var(--tic-tac-toe-text-color);
   font-weight: bold;
   transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
