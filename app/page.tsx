@@ -22,6 +22,14 @@ export default function Home() {
           <p>The classic game Tic-Tac-Toe</p>
         </Link>
 
+        {/* Card 2: Art */}
+        <Link href="/art" className={`${styles.card} ${styles.artsCard}`}>
+          <h2>
+            Art <span>&rarr;</span>
+          </h2>
+          <p>Some Random Cool Arts</p>
+        </Link>
+
       </div>
     </main>
   );
