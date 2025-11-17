@@ -50,6 +50,13 @@
   letter-spacing: -0.22px;
 }
 
+/* Base styles for grid sections */
+.gridSection {
+  position: relative;
+  margin-top: 1.625rem;
+}
+
+/* Grid for the intro gallery */
 .imageGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -60,14 +67,11 @@
   object-fit: cover;
 }
 
-.gridSection {
-  position: relative;
-  margin-top: 1.625rem;
-}
-
 /* ============================
-   PURPLE MARKER
+   MARKER STYLES
 ============================ */
+
+/* Base tag for floating markers */
 .highlightTag {
   display: block;
   position: absolute;
@@ -79,6 +83,7 @@
   padding: 0.2rem 0.5rem;
 }
 
+/* Purple marker (intro gallery) */
 .markerPurple {
   background-color: var(--design-marker-purple);
   top: 1.3rem;
@@ -97,12 +102,10 @@
   color: var(--design-green-bg);
 }
 
-/* ============================
-   GREEN MARKERS BLOCK
-============================ */
+/* Green marker container */
 .markerGreenContainer {
   position: absolute;
-  top: -4rem;        /* raised up so bottom lines overlap images */
+  top: -4rem; /* raised up so bottom lines overlap images */
   left: 1.625rem;
   right: 1.625rem;
 
@@ -112,7 +115,7 @@
   padding-right: 10px;
 }
 
-/* Each single marker */
+/* Each single green marker line */
 .markerGreen {
   background-color: var(--design-marker-green);
   color: var(--design-text-color);
@@ -123,7 +126,7 @@
   position: relative;
 }
 
-/* Text inside marker - unskewed */
+/* Text inside green marker (unskewed) */
 .markerGreen .highlightText {
   display: block;
   transform: skewX(15deg);
@@ -132,37 +135,35 @@
   font-family: var(--font-narkis-block);
   font-size: 0.938rem;
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 0.938rem;
   position: relative;
   z-index: 2;
-  white-space: nowrap;
+  white-space: nowrap; /* Keep text on one line */
 }
 
 .markerGreen .highlightText strong {
   font-weight: 500;
 }
 
+/* Staggering for Step 1 marker */
 .markerGreenContainer > .markerGreen:nth-child(2) {
   width: 15rem;
   margin-right: -0.3rem;
 }
-
 .markerGreenContainer > .markerGreen:nth-child(3) {
   width: 14rem;
   margin-right: 0.5rem;
 }
-
 .markerGreenContainer > .markerGreen:nth-child(4) {
   width: 13rem;
   margin-right: 0.4rem;
 }
-
 .markerGreenContainer > .markerGreen:nth-child(5) {
   width: 12rem;
   margin-right: 1.5rem;
 }
 
-/* Align text of markers 2 and 4 */
+/* Text alignment for specific lines in Step 1 marker */
 .markerGreenContainer > .markerGreen:nth-child(2) .highlightText,
 .markerGreenContainer > .markerGreen:nth-child(4) .highlightText {
   padding-right: 0.9rem; /* pushes text inward */
@@ -189,34 +190,34 @@
   margin: 0;
 }
 
+/* Main 2-column container for profiles */
+.howItWorksLayout {
+  display: flex;
+  gap: 0.5rem; 
+}
+
+/* Each column (Profile Pic + Gallery) */
+.howItWorksColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+}
+
 .profileImageItem {
   width: 100%;
   height: 15.313rem;
   object-fit: cover;
 }
 
-/* This is the main 2-column container */
-.howItWorksLayout {
-  display: flex;
-  gap: 0.5rem; /* Gap between the two columns */
-}
-
-/* This is each column (Profile Pic + Gallery) */
-.howItWorksColumn {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* Gap between profile picture and gallery below it */
-}
-
-/* Grid for the galleryGrid1 */
+/* Grid for profile 1 gallery */
 .galleryGrid1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
 }
 
-/* Grid for the galleryGrid2 */
+/* Grid for profile 2 gallery */
 .galleryGrid2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -228,4 +229,114 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Container for the second step */
+.howItWorksStep {
+  position: relative;
+  margin-top: 4rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Modifier for the Step 2 marker */
+.markerStep2 {
+  position: relative; /* Overrides 'absolute' */
+  top: auto;
+  right: -2.5rem;
+  z-index: 10;
+  margin-bottom: -3rem; 
+  align-items: center; 
+  padding-right: 0; 
+}
+
+/* Staggering for Step 2 marker text */
+.markerStep2 > .markerGreen:nth-child(1) {
+  width: 13rem; 
+  margin-right: -1.5rem; 
+}
+.markerStep2 > .markerGreen:nth-child(2) {
+  width: 15rem;
+  margin-right: -0.3rem;
+}
+.markerStep2 > .markerGreen:nth-child(3) {
+  width: 13rem;
+  margin-right: -1.5rem;
+}
+
+/* Container for the two separate stacks */
+.cuttingsStackContainer {
+  position: relative;
+  display: flex; 
+  gap: 3rem; 
+  justify-content: flex-end; 
+  align-items: center; 
+  height: 15.625rem; 
+  width: 100%; 
+}
+
+/* Base style for each individual stack container */
+.singleCuttingsStack {
+  position: relative; 
+  width: 9.375rem; 
+  height: 11.25rem; 
+}
+
+/* Base style for all images in the stack */
+.cuttingsImage {
+  object-fit: cover;
+  position: absolute; 
+}
+
+/* --- Right Stack (Profile 2) --- */
+.cuttingsStackContainer > .singleCuttingsStack:first-child .cuttingsImageBack2 {
+  transform: rotate(-9.041deg);
+  z-index: 1;
+  aspect-ratio: 112.30/174.03;
+}
+/* Right Stack - Middle Layer */
+.cuttingsStackContainer > .singleCuttingsStack:first-child .cuttingsImageBack1 {
+  transform: rotate(15deg);
+  z-index: 2;
+  aspect-ratio: 125.14/166.85;
+}
+/* Right Stack - Front Layer (Top) */
+.cuttingsStackContainer > .singleCuttingsStack:first-child .cuttingsImageFront {
+  transform: none;
+  z-index: 3;
+  aspect-ratio: 136.87/182.43;
+}
+
+
+/* --- Left Stack (Profile 1) --- */
+.cuttingsStackContainer > .singleCuttingsStack:last-child .cuttingsImageBack2 {
+  transform: rotate(-9.041deg);
+  z-index: 1;
+  aspect-ratio: 112.30/174.03;
+}
+/* Left Stack - Middle Layer */
+.cuttingsStackContainer > .singleCuttingsStack:last-child .cuttingsImageBack1 {
+  transform: rotate(11.429deg);
+  z-index: 2;
+  aspect-ratio: 120.24/160.10;
+}
+/* Left Stack - Front Layer (Top) */
+.cuttingsStackContainer > .singleCuttingsStack:last-child .cuttingsImageFront {
+  transform: rotate(1.431deg);
+  z-index: 3;
+  aspect-ratio: 125.14/166.85;
+}
+
+
+/* --- Stack Rotation --- */
+
+/* Overall rotation for the entire Right Stack */
+.cuttingsStackContainer > .singleCuttingsStack:first-child {
+  transform: rotate(6deg); /* <-- Change overall stack rotation here */
+}
+
+/* Overall rotation for the entire Left Stack */
+.cuttingsStackContainer > .singleCuttingsStack:last-child {
+  transform: rotate(-8deg); /* <-- Change overall stack rotation here */
 }

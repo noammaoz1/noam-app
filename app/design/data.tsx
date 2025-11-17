@@ -22,7 +22,7 @@ export const howItWorksProfiles = [
 
 export const howItWorksGallery1 = [
     'how-it-works-gallery-profile1-01.png',
-    'how-it-works-gallery-profile1-02.png',
+    'how-it-works-gallery-profile1-02.jpg',
     'how-it-works-gallery-profile1-03.png',
     'how-it-works-gallery-profile1-04.png',
     'how-it-works-gallery-profile1-05.png',
@@ -30,22 +30,22 @@ export const howItWorksGallery1 = [
 ];
 
 export const howItWorksGallery2 = [
-'how-it-works-gallery-profile2-01.png',
-    'how-it-works-gallery-profile2-02.png',
+    'how-it-works-gallery-profile2-01.png',
+    'how-it-works-gallery-profile2-02.jpg',
     'how-it-works-gallery-profile2-03.png',
     'how-it-works-gallery-profile2-04.png',
 ];
 
-export const howItWorksCuttings = [
-  {
-    src: 'how-it-works-cuttings-01.png',
-    alt: 'cuttings 1'
-  },
-    {
-    src: 'how-it-works-cuttings-02.png',
-    alt: 'cuttings 2'
-  },
-];
+// export const howItWorksCuttings = [
+//   {
+//     src: 'how-it-works-cuttings-01.png',
+//     alt: 'cuttings 1'
+//   },
+//     {
+//     src: 'how-it-works-cuttings-02.png',
+//     alt: 'cuttings 2'
+//   },
+// ];
 
 
 export const howItWorksMatch = [

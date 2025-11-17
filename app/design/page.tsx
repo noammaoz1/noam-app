@@ -1,5 +1,10 @@
 import Image from 'next/image';
-import { introGalleryImages, howItWorksProfiles, howItWorksGallery1, howItWorksGallery2 } from './data';
+import { 
+  introGalleryImages,
+  howItWorksProfiles, 
+  howItWorksGallery1, 
+  howItWorksGallery2, 
+} from './data';
 import styles from "./page.module.css";
 
 export default function DesignPage() {
@@ -33,7 +38,6 @@ export default function DesignPage() {
               תודו שהם מגניבים ויפים
             </span>
           </span>
-          {/* Note: You had howItWorksImageGrid here, I am removing it as it was incorrect */}.
           <div className={styles.imageGrid}>
             {introGalleryImages.map((filename, index) => (
               <Image
@@ -55,7 +59,6 @@ export default function DesignPage() {
         </h2>
         <div className={styles.gridSection}>
           <span className={`${styles.highlightTag} ${styles.markerGreenContainer}`}>
-            {/* ... (green marker spans remain the same) ... */}
             <span className={styles.markerGreen}>
               <span className={styles.highlightText}>
                 הכירו את <strong> מרים </strong> (22) ו<strong>נעה </strong> (28),
@@ -82,7 +85,7 @@ export default function DesignPage() {
               </span> 
             </span>
           </span> 
-                              
+                    
           <div className={styles.howItWorksLayout}>
             
             {/* Column 1 (Profile 1 + Gallery 1) */}
@@ -121,18 +124,99 @@ export default function DesignPage() {
               {/* Grid 2 */}
               <div className={styles.galleryGrid2}>
                 {howItWorksGallery2.map((img, index) => (
-                  <img
+                  <Image
                     key={index}
                     src={`/design-imgs/${img}`}
                     alt={`gallery 2 image ${index + 1}`}
+                    width={184.62}
+                    height={244.405}
                     className={styles.smallGridImage}
                   />
                 ))}
               </div>
             </div>
+          </div>
+        </div>
 
+        <div className={styles.howItWorksStep}>
+          <div className={`${styles.markerGreenContainer} ${styles.markerStep2}`}>
+            <span className={styles.markerGreen}>
+              <span className={styles.highlightText}>
+                על בסיס הנתונים שהן הזינו
+              </span> 
+            </span>
+            <span className={styles.markerGreen}>
+              <span className={styles.highlightText}>
+                בפרופיל האישי, האפליקציה מציעה
+              </span> 
+            </span>
+            <span className={styles.markerGreen}>
+              <span className={styles.highlightText}>
+                להן ייחורים שעשויים לעניין אותן
+              </span> 
+            </span>
           </div>
 
+          {/* Single container for the two stacks */}
+          <div className={styles.cuttingsStackContainer}>
+            
+            {/* Right Stack */}
+            <div className={styles.singleCuttingsStack}>
+              <Image
+                key="r-back-2"
+                src={`/design-imgs/how-it-works-gallery-profile2-03.png`}
+                alt=""
+                width={112.302}
+                height={174.028}
+                className={`${styles.cuttingsImage} ${styles.cuttingsImageBack2}`}
+              />
+              <Image
+                key="r-back-1"
+                src={`/design-imgs/how-it-works-gallery-profile2-01.png`}
+                alt=""
+                width={125.137}
+                height={166.849}
+                className={`${styles.cuttingsImage} ${styles.cuttingsImageBack1}`}
+              />
+              <Image
+                key="r-front"
+                src={`/design-imgs/how-it-works-gallery-profile2-02.jpg`}
+                alt="Cutting stack 2 front"
+                width={136.869}
+                height={182.431}
+                className={`${styles.cuttingsImage} ${styles.cuttingsImageFront}`}
+              />
+            </div>
+
+            {/* Left Stack */}
+            <div className={styles.singleCuttingsStack}>
+              <Image
+                key="l-back-2"
+                src={`/design-imgs/how-it-works-gallery-profile1-03.png`}
+                alt=""
+                width={112.302}
+                height={174.028}
+                className={`${styles.cuttingsImage} ${styles.cuttingsImageBack2}`}
+              />
+              <Image
+                key="l-back-1"
+                src={`/design-imgs/how-it-works-gallery-profile1-05.png`}
+                alt=""
+                width={120.243}
+                height={160.101}
+                className={`${styles.cuttingsImage} ${styles.cuttingsImageBack1}`}
+              />
+              <Image
+                key="l-front"
+                src={`/design-imgs/how-it-works-gallery-profile1-02.jpg`}
+                alt="Cutting stack 1 front"
+                width={125.137}
+                height={166.849}
+                className={`${styles.cuttingsImage} ${styles.cuttingsImageFront}`}
+              />
+            </div>
+
+          </div>
         </div>
       </div>
     </main>
