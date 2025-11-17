@@ -1,9 +1,17 @@
-.container {
-  background-color: var(--design-bg-color);
+.main {
+  width: 100%;
+  padding: 0;
+}
+
+/* ============================
+   GREEN SECTION
+============================ */
+.greenSection {
+  background-color: var(--design-green-bg);
   direction: rtl;
   text-align: right;
   color: var(--design-text-color);
-  padding: 3.25rem 1.625rem;
+  padding: 3.25rem 1.625rem 1.625rem 1.625rem;
 }
 
 .logo {
@@ -25,15 +33,6 @@
   margin: 0.5rem 0 2rem 0;
 }
 
-.description strong{
-  font-family: var(--font-narkis-block);
-  color: var(--design-text-color);
-  font-size: 1.375rem; 
-  font-weight: 500;
-  line-height: 1.375rem;
-  letter-spacing: -0.22px;
-}
-
 .description {
   font-family: var(--font-narkis-block);
   color: var(--design-text-color);
@@ -42,40 +41,191 @@
   line-height: 1.375rem;
 }
 
+.description strong {
+  font-family: var(--font-narkis-block);
+  color: var(--design-text-color);
+  font-size: 1.375rem; 
+  font-weight: 500;
+  line-height: 1.375rem;
+  letter-spacing: -0.22px;
+}
+
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns that are equal in width */
+  grid-template-columns: repeat(4, 1fr);
   padding-top: 2rem;
-  margin-bottom: 1.625rem;
+}
+
+.gridImage {
+  object-fit: cover;
 }
 
 .gridSection {
-  position: relative; /* To contain absolutely positioned children */
+  position: relative;
   margin-top: 1.625rem;
 }
 
+/* ============================
+   PURPLE MARKER
+============================ */
 .highlightTag {
-  display: inline-block; /* Enable padding and transform */
-  position: absolute; /* Make the tag float over the images grid */
-  top: 1.2rem;
-  left: 0.872rem;
-  transform: rotate(-7.301deg) skewX(-15deg);
-  width: 157.97px;
-  height: 19.22px;
-  font-family: var(--font-narkis-block);
-  font-size: 0.938rem; 
-  font-weight: 400;
-  line-height: 0.938rem;
-  padding: 0.2rem 0.5rem;
+  display: block;
+  position: absolute;
+  z-index: 10;
 }
 
 .highlightText {
-  display: inline-block;
-  transform: skewX(15deg);
+  display: block;
+  padding: 0.2rem 0.5rem;
 }
 
 .markerPurple {
   background-color: var(--design-marker-purple);
-  color: var(--design-bg-color);
+  top: 1.3rem;
+  left: 0.872rem;
+  width: 9.873rem;
+  height: 1.201rem;
+  transform: rotate(-7.301deg) skewX(-15deg);
+  font-family: var(--font-narkis-block);
+  font-size: 0.938rem; 
+  font-weight: 400;
+  line-height: 0.938rem;
 }
 
+.markerPurple .highlightText {
+  transform: skewX(15deg);
+  color: var(--design-green-bg);
+}
+
+/* ============================
+   GREEN MARKERS BLOCK
+============================ */
+.markerGreenContainer {
+  position: absolute;
+  top: -4rem;        /* raised up so bottom lines overlap images */
+  left: 1.625rem;
+  right: 1.625rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+
+/* Each single marker */
+.markerGreen {
+  background-color: var(--design-marker-green);
+  color: var(--design-text-color);
+  transform: skewX(-15deg);
+  opacity: 0.85;
+  margin-bottom: -5px;
+  padding: 0;
+  position: relative;
+}
+
+/* Text inside marker - unskewed */
+.markerGreen .highlightText {
+  display: block;
+  transform: skewX(15deg);
+  color: var(--design-text-color);
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-narkis-block);
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 1.1;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.markerGreen .highlightText strong {
+  font-weight: 500;
+}
+
+.markerGreenContainer > .markerGreen:nth-child(2) {
+  width: 15rem;
+  margin-right: -0.3rem;
+}
+
+.markerGreenContainer > .markerGreen:nth-child(3) {
+  width: 14rem;
+  margin-right: 0.5rem;
+}
+
+.markerGreenContainer > .markerGreen:nth-child(4) {
+  width: 13rem;
+  margin-right: 0.4rem;
+}
+
+.markerGreenContainer > .markerGreen:nth-child(5) {
+  width: 12rem;
+  margin-right: 1.5rem;
+}
+
+/* Align text of markers 2 and 4 */
+.markerGreenContainer > .markerGreen:nth-child(2) .highlightText,
+.markerGreenContainer > .markerGreen:nth-child(4) .highlightText {
+  padding-right: 0.9rem; /* pushes text inward */
+}
+
+/* ============================
+   PURPLE SECTION
+============================ */
+.purpleSection {
+  background-color: var(--design-purple-bg);
+  color: var(--design-text-color);
+  direction: rtl;
+  text-align: right;
+  padding: 2rem 1.625rem;
+}
+
+.purpleTitle {
+  font-family: var(--font-narkis-block);
+  color: var(--design-text-color);
+  font-size: 1.375rem; 
+  font-weight: 400;
+  line-height: 1.375rem;
+  padding: 0 0 5rem 0;
+  margin: 0;
+}
+
+.profileImageItem {
+  width: 100%;
+  height: 15.313rem;
+  object-fit: cover;
+}
+
+/* This is the main 2-column container */
+.howItWorksLayout {
+  display: flex;
+  gap: 0.5rem; /* Gap between the two columns */
+}
+
+/* This is each column (Profile Pic + Gallery) */
+.howItWorksColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Gap between profile picture and gallery below it */
+}
+
+/* Grid for the galleryGrid1 */
+.galleryGrid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+/* Grid for the galleryGrid2 */
+.galleryGrid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+/* Style for the small gallery images in both grids */
+.smallGridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
