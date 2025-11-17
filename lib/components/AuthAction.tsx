@@ -1,3 +1,4 @@
+'use server';
 import { SUPABASE_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/server";
 import { cookies } from "next/headers";

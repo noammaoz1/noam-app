@@ -29,6 +29,14 @@
   --tic-tac-toe-text-color: #3E3B6B;
   /************************************/
 
+  /************************************
+  /* Design assigment colors */
+  --design-text-color: #243B0F;
+  --design-bg-color: #EEFFD4;
+  --design-marker-purple: #970970;
+  /************************************/
+
+
   --border-radius: 0.5rem;
 
   --font-titles: "Rubik", serif;
