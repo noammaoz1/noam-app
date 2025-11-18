@@ -6,6 +6,8 @@ import {
 } from './data';
 import GreenSection from './GreenSection';
 import HowItWorksSection from './HowItWorksSection';
+import AppFeatures from "@/lib/components/design/AppFeatures";
+
 import styles from "./page.module.css";
 
 export default function DesignPage() {
@@ -18,6 +20,7 @@ export default function DesignPage() {
         howItWorksGallery1={howItWorksGallery1}
         howItWorksGallery2={howItWorksGallery2}
       />
+      <AppFeatures />
     </main>
   );
 }
