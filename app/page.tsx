@@ -33,7 +33,7 @@ export default function Home() {
         {/* Card 3: design */}
         <Link href="/design" className={`${styles.card} ${styles.designCard}`}>
           <h2>
-            Art <span>&rarr;</span>
+            Design <span>&rarr;</span>
           </h2>
           <p>Design to code</p>
         </Link>

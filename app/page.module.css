@@ -161,7 +161,7 @@
     position: relative;
     overflow: hidden;
     /* Ensures the overlay corners are rounded */
-    background-image: url("/art-img.jpg");
+    background-image: url("/design-img.jpg");
     background-size: cover;
     background-position: center;
 }
