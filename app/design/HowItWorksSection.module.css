@@ -1,0 +1,247 @@
+.purpleSection {
+  background-color: var(--design-purple-bg);
+  color: var(--design-text-color);
+  direction: rtl;
+  text-align: right;
+  padding: 2rem 1.625rem;
+  width: 100%;
+}
+
+.purpleTitle {
+  font-family: var(--font-narkis-block);
+  color: var(--design-text-color);
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  padding: 0 0 5rem 0;
+  margin: 0;
+}
+
+.gridSection {
+  position: relative;
+  margin-top: 1.625rem;
+}
+
+.highlightTag {
+  display: block;
+  position: absolute;
+  z-index: 10;
+}
+
+.highlightText {
+  display: block;
+  padding: 0.2rem 0.5rem;
+}
+
+.markerGreenContainer {
+  position: absolute;
+  top: -4rem; /* raised up so bottom lines overlap images */
+  left: 1.625rem;
+  right: 1.625rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 10px;
+}
+
+.markerGreen {
+  background-color: var(--design-marker-green);
+  color: var(--design-text-color);
+  transform: skewX(-15deg);
+  opacity: 0.85;
+  margin-bottom: -5px;
+  padding: 0;
+  position: relative;
+}
+
+.markerGreen .highlightText {
+  display: block;
+  transform: skewX(15deg);
+  color: var(--design-text-color);
+  padding: 0.2rem 0.5rem;
+  font-family: var(--font-narkis-block);
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: 0.938rem;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap; /* Keep text on one line */
+}
+
+.markerGreen .highlightText strong {
+  font-weight: 500;
+}
+
+/* Staggering for Step 1 marker */
+.markerGreenContainer > .markerGreen:nth-child(2) {
+  width: 15rem;
+  margin-right: -0.3rem;
+}
+.markerGreenContainer > .markerGreen:nth-child(3) {
+  width: 14rem;
+  margin-right: 0.5rem;
+}
+.markerGreenContainer > .markerGreen:nth-child(4) {
+  width: 13rem;
+  margin-right: 0.4rem;
+}
+.markerGreenContainer > .markerGreen:nth-child(5) {
+  width: 12rem;
+  margin-right: 1.5rem;
+}
+
+/* Text alignment for specific lines in Step 1 marker */
+.markerGreenContainer > .markerGreen:nth-child(2) .highlightText,
+.markerGreenContainer > .markerGreen:nth-child(4) .highlightText {
+  padding-right: 0.9rem; /* pushes text inward */
+}
+
+.howItWorksLayout {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.howItWorksColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profileImageItem {
+  width: 100%;
+  height: 15.313rem;
+  object-fit: cover;
+}
+
+.galleryGrid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.galleryGrid2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.smallGridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.howItWorksStep {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.markerStep2 {
+  composes: markerGreenContainer;
+  position: relative; /* Overrides 'absolute' */
+  top: auto;
+  right: -2.5rem;
+  z-index: 10;
+  margin-bottom: -3rem;
+  align-items: center;
+  padding-right: 0;
+}
+
+.markerStep2 > .markerGreen:nth-child(1) { width: 13rem; margin-right: -1.5rem; }
+.markerStep2 > .markerGreen:nth-child(2) { width: 15rem; margin-right: -0.3rem; }
+.markerStep2 > .markerGreen:nth-child(3) { width: 13rem; margin-right: -1.5rem; }
+
+.cuttingsStackContainer {
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  justify-content: flex-end;
+  align-items: center;
+  height: 15.625rem;
+  width: 100%;
+  margin-bottom: -2rem;
+}
+
+.singleCuttingsStack {
+  position: relative;
+  width: 9.375rem;
+  height: 11.25rem;
+}
+
+.cuttingsImage {
+  object-fit: cover;
+  position: absolute;
+}
+
+/* --- Right Stack (Profile 2) --- */
+.cuttingsStackContainer > .singleCuttingsStack:first-child .cuttingsImageBack2 { transform: rotate(-9.041deg); z-index: 1; aspect-ratio: 112.30/174.03; }
+.cuttingsStackContainer > .singleCuttingsStack:first-child .cuttingsImageBack1 { transform: rotate(15deg); z-index: 2; aspect-ratio: 125.14/166.85; }
+.cuttingsStackContainer > .singleCuttingsStack:first-child .cuttingsImageFront { transform: none; z-index: 3; aspect-ratio: 136.87/182.43; }
+
+/* --- Left Stack (Profile 1) --- */
+.cuttingsStackContainer > .singleCuttingsStack:last-child .cuttingsImageBack2 { transform: rotate(-9.041deg); z-index: 1; aspect-ratio: 112.30/174.03; }
+.cuttingsStackContainer > .singleCuttingsStack:last-child .cuttingsImageBack1 { transform: rotate(11.429deg); z-index: 2; aspect-ratio: 120.24/160.10; }
+.cuttingsStackContainer > .singleCuttingsStack:last-child .cuttingsImageFront { transform: rotate(1.431deg); z-index: 3; aspect-ratio: 125.14/166.85; }
+
+/* --- Stack Rotation --- */
+.cuttingsStackContainer > .singleCuttingsStack:first-child { transform: rotate(6deg); }
+.cuttingsStackContainer > .singleCuttingsStack:last-child { transform: rotate(-8deg); }
+
+.markerStep3 {
+  composes: markerGreenContainer;
+  position: relative;
+  top: auto;
+  right: -2.5rem;
+  z-index: 10;
+  margin-bottom: 1rem; /* Give space before the images */
+  align-items: center;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.markerStep3 > .markerGreen:nth-child(1) { width: 12rem; margin-right: -1.5rem; }
+.markerStep3 > .markerGreen:nth-child(2) { width: 12rem; margin-right: -2rem; }
+
+.matchContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.matchImage {
+  width: 184.624px;
+  height: 246.165px;
+  object-fit: cover;
+}
+
+.markerMatch {
+  composes: highlightTag;
+  background-color: var(--design-marker-purple-light);
+  width: 14.383rem;
+  height: 3.063rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-7.3deg) skewX(-15deg);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-museum-aaa);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.markerMatch .highlightText {
+  transform: skewX(15deg);
+  color: var(--design-text-color); /* Text color from var */
+  text-align: center;
+}
