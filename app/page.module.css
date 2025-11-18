@@ -97,7 +97,8 @@
 
 /* Dark overlay for readability */
 .ticTacToeCard::before,
-.artsCard::before {
+.artsCard::before,
+.designCard::before {
     content: '';
     position: absolute;
     top: 0;
@@ -114,7 +115,9 @@
 .ticTacToeCard h2,
 .ticTacToeCard p,
 .artsCard h2,
-.artsCard p {
+.artsCard p,
+.designCard h2,
+.designCard p{
     position: relative;
     z-index: 1;
     color: var(--color-background);
@@ -125,7 +128,8 @@
 
 /* Show overlay on card hover */
 .ticTacToeCard:hover::before,
-.artsCard:hover::before {
+.artsCard:hover::before,
+.designCard:hover::before {
     opacity: 1;
     /* Make overlay visible */
 }
@@ -134,7 +138,9 @@
 .ticTacToeCard:hover h2,
 .ticTacToeCard:hover p,
 .artsCard:hover h2,
-.artsCard:hover p {
+.artsCard:hover p,
+.designCard:hover h2,
+.designCard:hover p{
     opacity: 1;
     /* Make text visible */
     transform: translateY(0);
@@ -143,6 +149,15 @@
 
 
 .artsCard {
+    position: relative;
+    overflow: hidden;
+    /* Ensures the overlay corners are rounded */
+    background-image: url("/art-img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.designCard {
     position: relative;
     overflow: hidden;
     /* Ensures the overlay corners are rounded */

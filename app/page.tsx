@@ -30,6 +30,14 @@ export default function Home() {
           <p>Some Random Cool Arts</p>
         </Link>
 
+        {/* Card 3: design */}
+        <Link href="/design" className={`${styles.card} ${styles.designCard}`}>
+          <h2>
+            Art <span>&rarr;</span>
+          </h2>
+          <p>Design to code</p>
+        </Link>
+
       </div>
     </main>
   );

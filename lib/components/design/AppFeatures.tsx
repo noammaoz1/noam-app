@@ -10,12 +10,12 @@ export default function AppFeatures() {
 
         {/* Item 1 */}
         <div className={styles.item}>
-          <span className={styles.itemTitle}>פתרון חברתי</span>
+          <span className={styles.itemTitle}>צוברים אמינות</span>
           <Image
-            src="/icons/SocialSolutionIcon.svg"
-            alt="Social Solution Icon"
-            width={30.731}
-            height={46.253}
+            src="/icons/StarsIcon.svg"
+            alt="Stars Icon"
+            width={94.376}
+            height={34.847}
             className={styles.icon}
           />
         </div>
@@ -34,12 +34,12 @@ export default function AppFeatures() {
         
         {/* Item 3 */}  
         <div className={styles.item}>
-          <span className={styles.itemTitle}>צוברים אמינות</span>
+          <span className={styles.itemTitle}>פתרון חברתי</span>
           <Image
-            src="/icons/StarsIcon.svg"
-            alt="Stars Icon"
-            width={94.376}
-            height={34.847}
+            src="/icons/SocialSolutionIcon.svg"
+            alt="Social Solution Icon"
+            width={30.731}
+            height={46.253}
             className={styles.icon}
           />
         </div>
