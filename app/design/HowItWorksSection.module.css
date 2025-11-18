@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-right: 10px;
+  padding-right: 0.625rem;
 }
 
 .markerGreen {
@@ -49,7 +49,7 @@
   color: var(--design-text-color);
   transform: skewX(-15deg);
   opacity: 0.85;
-  margin-bottom: -5px;
+  margin-bottom: -0.3125rem;
   padding: 0;
   position: relative;
 }
@@ -215,8 +215,8 @@
 }
 
 .matchImage {
-  width: 184.624px;
-  height: 246.165px;
+  width: 11.539rem;
+  height: 15.385rem;
   object-fit: cover;
 }
 

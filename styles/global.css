@@ -57,12 +57,12 @@ body {
 /* Layout */
 main {
   max-width: 60rem;
-  padding: 2rem; /* 32px */
+  padding: 2rem;
   margin: 0 auto;
 }
 
 header {
-  padding: 1rem 2rem; /* 16px 32px */
+  padding: 1rem 2rem;
   background-color: var(--color-primary);
   display: flex;
   justify-content: space-between;
@@ -85,12 +85,12 @@ header {
   nav {
     display: flex;
     flex-direction: row;
-    gap: 1rem; /* 16px */
+    gap: 1rem;
   }
 }
 
 footer {
-  padding: 1rem; /* 16px */
+  padding: 1rem;
   font-size: 0.8rem;
   text-align: center;
 }
@@ -151,7 +151,7 @@ h6 {
 
 blockquote {
   padding-left: 1rem;
-  border-left: 0.125rem solid var(--color-secondary); /* 2px */
+  border-left: 0.125rem solid var(--color-secondary);
 }
 
 /* Links */
@@ -174,7 +174,7 @@ table {
 table td,
 table th {
   padding: 0.5rem;
-  border: 0.0625rem solid var(--color-secondary); /* 1px */
+  border: 0.0625rem solid var(--color-secondary);
 }
 
 /* Forms */
@@ -183,13 +183,13 @@ button,
 textarea,
 select {
   padding: 0.2rem 0.5rem;
-  border: 0.0625rem solid var(--color-secondary); /* 1px */
+  border: 0.0625rem solid var(--color-secondary);
   border-radius: var(--border-radius);
 }
 
 fieldset {
   margin-top: 1.5rem;
-  border: 1px solid var(--color-secondary);
+  border: 0.0625rem solid var(--color-secondary);
 }
 
 .counter-button {
@@ -198,7 +198,7 @@ fieldset {
   height: 2rem;
   color: white;
   border: none;
-  border-radius: 1000px;
+  border-radius: 62.5rem;
   /* Make the button round */
   cursor: pointer;
   font-weight: bold;

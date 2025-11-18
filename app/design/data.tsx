@@ -37,6 +37,6 @@ export const howItWorksGallery2 = [
 ];
 
 export const howItWorksMeetup = {
-  src: 'how-it-works-meetup-01.png',
+  src: 'how-it-works-meetup.png',
   alt: 'meet up - profiles 1 and 2'
 };

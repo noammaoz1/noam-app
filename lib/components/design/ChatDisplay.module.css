@@ -124,7 +124,7 @@
   content: "";
   position: absolute;
   bottom: -1.3rem; /* Stick out at bottom */
-  width: 4.5rem;
+  width: 4.5rem; /* 72px */
   height: 3rem;
   background-color: var(--design-marker-purple);
   /* Triangle shape pointing down-left */
