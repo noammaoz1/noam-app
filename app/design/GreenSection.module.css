@@ -70,7 +70,9 @@
 }
 
 .markerPurple {
-  composes: highlightTag;
+  display: block;
+  position: absolute;
+  z-index: 10;
   background-color: var(--design-marker-purple);
   top: 1.3rem;
   left: 0.872rem;

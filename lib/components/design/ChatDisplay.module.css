@@ -1,0 +1,142 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* --- Marker Styles --- */
+.markerWrapper {
+  position: relative;
+  z-index: 10;
+  margin-bottom: -1.5rem; /* Overlap with the chat bubbles */
+  align-self: center;
+  transform: translateX(-4.375rem) translateY(-0.75rem); /* Slight offset to the left as in design */
+}
+
+.highlighterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.markerGreen {
+  background-color: var(--design-marker-green);
+  transform: skewX(-15deg) rotate(-4deg);
+  padding: 0.2rem 0.3rem;
+}
+
+.markerText {
+  display: block;
+  transform: skewX(15deg); /* Un-skew text */
+  font-family: var(--font-narkis-block);
+  font-size: 0.938rem;
+  font-weight: 400;
+  color: var(--design-text-color);
+  white-space: nowrap;
+  position: relative;
+  line-height: 0.938rem;
+}
+
+/* --- Chat Area --- */
+.chatArea {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bubble {
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  line-height: 0.938rem;
+}
+
+.messageText {
+  font-family: var(--font-narkis-block);
+  font-size: 0.938rem;
+  margin: 0;
+  font-weight: 400;
+  align-items: flex-start;
+  gap: 0.875rem;
+  width: 125%;
+  text-align: right;
+}
+
+.timestamp {
+  display: block;
+  font-family: var(--font-narkis-block);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+/* Right Bubble Styles */
+.bubbleRight {
+  align-items: flex-end;
+  padding: 1rem 2rem;   
+  border-radius: 3.344rem;
+  width: 12.781rem;
+  height: 5.307rem;
+  background-color: var(--design-marker-purple-light);
+  color: var(--design-text-color);
+  text-align: right;
+  position: relative; 
+}
+
+
+/* Tail for Right Bubble */
+.bubbleRight::after {
+  content: "";
+  position: absolute;
+  left: 3.5rem; 
+  width: 2.5rem; 
+  height: 2rem;
+  background-color: var(--design-marker-purple-light);
+  /* Clip path creates the triangle shape */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  z-index: 2;
+}
+
+.bubbleRight .timestamp {
+  color: var(--design-text-color);
+  margin-top: -0.3rem;
+}
+
+/* Left Bubble Styles */
+.bubbleLeft {
+  align-self: flex-end;
+  background-color: var(--design-marker-purple);
+  color: var(--design-white-text);
+  text-align: right;
+  border-radius: 1rem;
+  
+  /* Overlap logic */
+  margin-top: -0.3125rem;
+  z-index: 2; /* Ensure it sits on top if they overlap */
+  width: 13.607rem;
+  height: 6.4375rem;
+}
+
+/* Tail for Left Bubble */
+.bubbleLeft::after {
+  content: "";
+  position: absolute;
+  bottom: -1.3rem; /* Stick out at bottom */
+  width: 4.5rem;
+  height: 3rem;
+  background-color: var(--design-marker-purple);
+  /* Triangle shape pointing down-left */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  z-index: -1;
+}
+
+.bubbleLeft .timestamp {
+  color: var(--design-white-text);
+}
+
+.bubbleRight .timestamp,
+.bubbleLeft .timestamp{
+  text-align: left;
+}

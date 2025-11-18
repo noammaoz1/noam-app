@@ -141,7 +141,6 @@
 }
 
 .markerStep2 {
-  composes: markerGreenContainer;
   position: relative; /* Overrides 'absolute' */
   top: auto;
   right: -2.5rem;
@@ -192,7 +191,6 @@
 .cuttingsStackContainer > .singleCuttingsStack:last-child { transform: rotate(-8deg); }
 
 .markerStep3 {
-  composes: markerGreenContainer;
   position: relative;
   top: auto;
   right: -2.5rem;
@@ -223,14 +221,13 @@
 }
 
 .markerMatch {
-  composes: highlightTag;
   background-color: var(--design-marker-purple-light);
   width: 14.383rem;
   height: 3.063rem;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-7.3deg) skewX(-15deg);
+  transform: translate(-50%, -50%) rotate(-8.79deg) skewX(-15deg);
   z-index: 20;
   display: flex;
   align-items: center;

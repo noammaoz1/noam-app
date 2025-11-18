@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Highlighter from '@/lib/components/design/Highlighter';
 import ProfileGallery from '@/lib/components/design/ProfileGallery';
 import CuttingsStack from '@/lib/components/design/CuttingsStack';
+import ChatDisplay from '@/lib/components/design/ChatDisplay';
 import styles from './HowItWorksSection.module.css';
 
 interface Profile {
@@ -141,6 +142,9 @@ export default function HowItWorksSection({
             ]}
           />
         </div>
+      </div>
+      <div className={styles.howItWorksStep}>
+        <ChatDisplay />
       </div>
     </div>
   );
