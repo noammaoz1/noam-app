@@ -5,7 +5,9 @@ import {
 import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
-export const createClient = (cookieStore: ReturnType<typeof cookies>) => {
+export const createClient = async () => {
+  const cookieStore = await cookies();
+
   return createServerClient(PUBLIC_SUPABASE_URL, PRIVATE_SUPABASE_SERVICE_KEY, {
     cookies: {
       get(name: string) {
@@ -15,16 +17,14 @@ export const createClient = (cookieStore: ReturnType<typeof cookies>) => {
         try {
           cookieStore.set({ name, value, ...options });
         } catch (error) {
-          // we can get here when in a server component, and it is
-          // fine as long as we also have supabase middleware in place
+          
         }
       },
       remove(name: string, options: CookieOptions) {
         try {
           cookieStore.set({ name, value: "", ...options });
         } catch (error) {
-          // we can get here when in a server component, and it is
-          // fine as long as we also have supabase middleware in place
+          
         }
       },
     },
