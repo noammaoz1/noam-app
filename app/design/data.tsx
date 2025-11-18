@@ -36,29 +36,6 @@ export const howItWorksGallery2 = [
     'how-it-works-gallery-profile2-04.png',
 ];
 
-// export const howItWorksCuttings = [
-//   {
-//     src: 'how-it-works-cuttings-01.png',
-//     alt: 'cuttings 1'
-//   },
-//     {
-//     src: 'how-it-works-cuttings-02.png',
-//     alt: 'cuttings 2'
-//   },
-// ];
-
-
-export const howItWorksMatch = [
-  {
-    src: 'how-it-works-match-01.png',
-    alt: 'plant - profile 1'
-  },
-  {
-    src: 'how-it-works-match-02.png',
-    alt: 'plant - profile 2'
-  }
-];
-
 export const howItWorksMeetup = {
   src: 'how-it-works-meetup-01.png',
   alt: 'meet up - profiles 1 and 2'

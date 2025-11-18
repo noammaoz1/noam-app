@@ -155,7 +155,51 @@ export default function DesignPage() {
                 { src: "how-it-works-gallery-profile1-02.jpg", w: 125.137, h: 166.849, className: `${styles.cuttingsImage} ${styles.cuttingsImageFront}` },
               ]}
             />
+          </div>
+        </div>
 
+          <div className={styles.howItWorksStep}>
+            
+            {/* New Green Marker */}
+            <Highlighter
+              className={`${styles.markerGreenContainer} ${styles.markerStep3}`}
+              lines={[
+                {
+                  text: <span className={styles.highlightText}>וברגע שהן החליקו ימינה</span>,
+                  lineClass: styles.markerGreen
+                },
+                {
+                  text: <span className={styles.highlightText}>לייחור אחת של השנייה...</span>,
+                  lineClass: styles.markerGreen
+                },
+              ]}
+            />
+
+            {/* Match Images & Purple Marker Container */}
+          <div className={styles.matchContainer}>
+            
+            <Image
+              src={`/design-imgs/how-it-works-gallery-profile1-02.jpg`}
+              alt="Miryam's cutting"
+              width={150}
+              height={180}
+              className={styles.matchImage}
+            />
+
+            <Image
+              src={`/design-imgs/how-it-works-gallery-profile2-02.jpg`}
+              alt="Noa's cutting"
+              width={150}
+              height={180}
+              className={styles.matchImage}
+            />
+            {/* The purple "Match" marker overlay */}
+            <Highlighter
+              className={`${styles.highlightTag} ${styles.markerMatch}`}
+              lines={[
+                { text: <span className={styles.highlightText}>יש התאמה!</span>, lineClass: "" }
+              ]}
+            />
           </div>
         </div>
       </div>
