@@ -24,8 +24,8 @@ export default function AppFeatures() {
         <div className={styles.item}>
           <span className={styles.itemTitle}>מעודד קיימות</span>
           <Image
-            src="/icons/LeavesIcon.svg"
-            alt="Leaves Icon"
+            src="/icons/leavesIcon.svg"
+            alt="leaves Icon"
             width={28.493}
             height={41.443}
             className={styles.icon}
