@@ -1,4 +1,4 @@
-Link to the figma design:
+Link to the figma design:  
 https://www.figma.com/design/7XVzysuBvU2IY8f5m8nomg/%D7%92%D7%9C-%D7%91%D7%95%D7%A8%D7%A9%D7%98%D7%99%D7%99%D7%9F?m=auto&t=fEizBh8Mz4URIW59-6
 
 # Starter Kit
